@@ -21,6 +21,9 @@ class ViewController: UIViewController {
 
 
     @IBAction func saveButton(_ sender: Any) {
+        nameLabel.text = "Name: \(nameTextField.text)"
+        birthdayLabel.text = "Birtday: \(birthdayTextField.text)"
+        
     }
 }
 
