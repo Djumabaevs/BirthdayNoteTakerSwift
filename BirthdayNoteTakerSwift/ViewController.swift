@@ -16,13 +16,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+        let savedName = UserDefaults.standard.object(forKey: "name")
+        let savedBirthday = UserDefaults.standard.object(forKey: "birthday")
     }
 
 
     @IBAction func saveButton(_ sender: Any) {
-        UserDefaults.standard.set(nameTextField.text!, "name")
-        UserDefaults.standard.set(birthdayTextField.text!, "birthday")
+        UserDefaults.standard.set(nameTextField.text!, forKey: "name")
+        UserDefaults.standard.set(birthdayTextField.text!, forKey: "birthday")
         
         nameLabel.text = "Name: \(nameTextField.text!)"
         birthdayLabel.text = "Birtday: \(birthdayTextField.text!)"
