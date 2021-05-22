@@ -19,6 +19,13 @@ class ViewController: UIViewController {
        
         let savedName = UserDefaults.standard.object(forKey: "name")
         let savedBirthday = UserDefaults.standard.object(forKey: "birthday")
+        
+        if let newName = savedName as? String {
+            nameLabel.text = newName
+        }
+        if let newBirthday = savedBirthday as? String {
+            birthdayLabel.text = newBirthday
+        }
     }
 
 
